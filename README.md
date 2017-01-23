@@ -48,7 +48,7 @@ So now, you have to install all modules present in the file "package.json" by si
 ## 4 - Start your project
 
 And finally, you can launch the lite-server and watcher to start coding :
-> npm run start
+> npm run start  
 *if nothing appears on the web browser, just refresh your page*
 
 ## 5 - Tips
