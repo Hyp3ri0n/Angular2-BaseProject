@@ -6,23 +6,23 @@ This is a little repository that bring you a development environment to create a
 
 ## Architecture
 
-|-- dist			// Folder that contains the build of the app (will be generated | same structure as "./src")
-|-- node_modules	// Folder that contains all the modules (will be generated)
-|-- src				// Folder that contains all the sources (development environment)
-|   |-- app
-|   |-- assets
-|   |	|-- fonts
-|	|	|-- images
-|	|	|-- styles
-|	|	|-- vendors
-|	|		|--libs
-|	|--index.html
-|-- bs-config		// Config for lite-server
-|-- gulpfile.js 	// Gulpfile which contains tasks
-|-- package.json 	// Config for npm dependencies, etc...
-|-- readme.md 		// Me :)
-|-- tsconfig.json 	// Config for the compiler
-|-- tslint.json 	// Config for tslint module (the format of ".ts" files)
+|-- dist			// Folder that contains the build of the app (will be generated | same structure as "./src")  
+|-- node_modules	// Folder that contains all the modules (will be generated)  
+|-- src				// Folder that contains all the sources (development environment)  
+|   |-- app  
+|   |-- assets  
+|   |	|-- fonts  
+|	|	|-- images  
+|	|	|-- styles  
+|	|	|-- vendors  
+|	|		|--libs  
+|	|--index.html  
+|-- bs-config		// Config for lite-server  
+|-- gulpfile.js 	// Gulpfile which contains tasks  
+|-- package.json 	// Config for npm dependencies, etc...  
+|-- readme.md 		// Me :)  
+|-- tsconfig.json 	// Config for the compiler  
+|-- tslint.json 	// Config for tslint module (the format of ".ts" files)  
 
 ------------------
 
@@ -53,10 +53,10 @@ And finally, you can launch the lite-server and watcher to start coding :
 
 ## 5 - Tips
 
-* To clean your project :
+To clean your project :
 > npm run clean
 
-* To build your project without starting the lite-server and watchers :
+To build your project without starting the lite-server and watchers :
 > npm run build
 
 ------------------
