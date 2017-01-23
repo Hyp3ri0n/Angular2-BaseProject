@@ -9,14 +9,14 @@ This is a little repository that bring you a development environment to create a
 |-- dist			// Folder that contains the build of the app (will be generated | same structure as "./src")  
 |-- node_modules	// Folder that contains all the modules (will be generated)  
 |-- src				// Folder that contains all the sources (development environment)  
-|   |-- app  
-|   |-- assets  
-|   |	|-- fonts  
-|	|	|-- images  
-|	|	|-- styles  
-|	|	|-- vendors  
-|	|		|--libs  
-|	|--index.html  
+|&nbsp;&nbsp;&nbsp;|-- app  
+|&nbsp;&nbsp;&nbsp;|-- assets  
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|-- fonts  
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|-- images  
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|-- styles  
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|-- vendors  
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--libs  
+|&nbsp;&nbsp;&nbsp;|--index.html  
 |-- bs-config		// Config for lite-server  
 |-- gulpfile.js 	// Gulpfile which contains tasks  
 |-- package.json 	// Config for npm dependencies, etc...  
