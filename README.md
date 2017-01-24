@@ -6,23 +6,23 @@ This is a little repository that bring you a development environment to create a
 
 ## Architecture
 
-|-- dist			// Folder that contains the build of the app (will be generated | same structure as "./src")  
-|-- node_modules	// Folder that contains all the modules (will be generated)  
-|-- src				// Folder that contains all the sources (development environment)  
-|&nbsp;&nbsp;&nbsp;|-- app  
-|&nbsp;&nbsp;&nbsp;|-- assets  
-|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|-- fonts  
-|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|-- images  
-|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|-- styles  
-|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|-- vendors  
-|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--libs  
-|&nbsp;&nbsp;&nbsp;|--index.html  
-|-- bs-config		// Config for lite-server  
-|-- gulpfile.js 	// Gulpfile which contains tasks  
-|-- package.json 	// Config for npm dependencies, etc...  
-|-- readme.md 		// Me :)  
-|-- tsconfig.json 	// Config for the compiler  
-|-- tslint.json 	// Config for tslint module (the format of ".ts" files)  
+|-- dist&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Folder that contains the build of the app (will be generated | same structure as "./src")  
+|-- node_modules&nbsp;&nbsp;&nbsp;&nbsp;// Folder that contains all the modules (will be generated)  
+|-- src&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Folder that contains all the sources (development environment)  
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- app  
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- assets  
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- fonts  
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- images  
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- styles  
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- vendors  
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--libs  
+|&nbsp;&nbsp;&nbsp;&nbsp;|--index.html  
+|-- bs-config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Config for lite-server  
+|-- gulpfile.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Gulpfile which contains tasks  
+|-- package.json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Config for npm dependencies, etc...  
+|-- readme.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Me :)  
+|-- tsconfig.json&nbsp;&nbsp;&nbsp;&nbsp;// Config for the compiler  
+|-- tslint.json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Config for tslint module (the format of ".ts" files)  
 
 ------------------
 
