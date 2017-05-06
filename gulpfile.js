@@ -22,40 +22,42 @@ var sass = require('gulp-sass');
 /**
  * Remove dist directory.
  */
-gulp.task('clean', function(cb) {
+gulp.task('clean', function (cb) {
     return del(['dist'], cb);
 });
 
 /**
  * Copy all resources that are not TypeScript or CSS files into dist directory.
  */
-gulp.task('resources', function() {
+gulp.task('resources', function () {
     return gulp.src(['src/**/*', '!src/app/**/*.ts', '!**/*.css', '!**/*.scss'])
-    	.pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'));
 });
 
 /**
  * Copy all "*.scss" after compiling them.
  */
 gulp.task('sass', function () {
-  return gulp.src('src/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist'));
+    return gulp.src('src/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(concat('styleSASS.css'))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('dist/assets/styles'));
 });
 
 /**
  * Copy all ".css" files and minify them.
  */
-gulp.task('style', ['sass'],  function() {
+gulp.task('style', ['sass'], function () {
     return gulp.src('src/**/*.css')
-    	.pipe(cleanCSS())
+        .pipe(cleanCSS())
         .pipe(gulp.dest('dist'));
 });
 
 /**
  * Lint all TypeScript files.
  */
-gulp.task('tslint', function() {
+gulp.task('tslint', function () {
     return gulp.src('src/**/*.ts')
         .pipe(tslint({
             formatter: 'prose'
@@ -66,28 +68,28 @@ gulp.task('tslint', function() {
 /**
  * Compile TypeScript sources and uglify them.
  */
-gulp.task('compile', ['tslint'], function() {
+gulp.task('compile', ['tslint'], function () {
     var tsResult = gulp.src('src/app/**/*.ts')
         .pipe(sourcemaps.init())
         .pipe(tsProject());
     return tsResult.js
-    	.pipe(sourcemaps.write(".", {sourceRoot: '/src'}))
+        .pipe(sourcemaps.write(".", {sourceRoot: '/src'}))
         .pipe(gulp.dest('dist/app/'));
 });
 
 /**
  * Copy all required libraries into build directory.
  */
-gulp.task("libs", function() {
+gulp.task("libs", function () {
     return gulp.src([
-            'core-js/client/shim.min.js',
-            'systemjs/dist/system-polyfills.js',
-            'systemjs/dist/system.src.js',
-            'reflect-metadata/Reflect.js',
-            'rxjs/**/*.js',
-            'zone.js/dist/**',
-            '@angular/**/bundles/**'
-        ], {cwd: "node_modules/**"}) /* Glob required here. */
+        'core-js/client/shim.min.js',
+        'systemjs/dist/system-polyfills.js',
+        'systemjs/dist/system.src.js',
+        'reflect-metadata/Reflect.js',
+        'rxjs/**/*.js',
+        'zone.js/dist/**',
+        '@angular/**/bundles/**'
+    ], {cwd: "node_modules/**"}) /* Glob required here. */
         .pipe(gulp.dest("dist/assets/vendors/libs/"));
 });
 
@@ -109,7 +111,7 @@ gulp.task('watch', function () {
 /**
  * Build the project.
  */
-gulp.task('build', ['resources', 'style', 'compile', 'libs'], function() {
+gulp.task('build', ['resources', 'style', 'compile', 'libs'], function () {
     console.log('Project built.');
 });
 
@@ -117,6 +119,6 @@ gulp.task('build', ['resources', 'style', 'compile', 'libs'], function() {
 /**
  * Launch watchers.
  */
-gulp.task('default', ['resources', 'style', 'compile', 'libs', 'watch'], function() {
+gulp.task('default', ['resources', 'style', 'compile', 'libs', 'watch'], function () {
     console.log('Watchers launched ...');
 });

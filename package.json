@@ -1,11 +1,12 @@
 {
   "name": "Angular2-BaseProject",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "This is a little repository that bring you a development environment to create a project with Angular 2 and SASS (optional). It works with gulp and lite-server.",
   "scripts": {
-    "start": "concurrent --kill-others \"gulp\" \"lite-server --baseDir ./dist --port 3333\"",
+    "start": "lite-server --baseDir ./dist --port 3333",
     "clean": "gulp clean",
-    "build": "gulp build"
+    "build": "gulp build",
+    "watch": "gulp"
   },
   "dependencies": {
     "@angular/common": "~2.2.4",

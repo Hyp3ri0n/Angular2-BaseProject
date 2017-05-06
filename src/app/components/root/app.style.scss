@@ -1,0 +1,6 @@
+@import '../../../assets/styles/components';
+
+.appTitle {
+  @extend .title;
+  color : gray;
+}
